@@ -44,4 +44,4 @@ Fetch API requests. The backend provides REST endpoints for artists,
 albums and songs and performs CRUD operations against the SQLite database.
 
 ## ATTENTION‼️‼️‼️
-Audio files are not included in this repository for copyright reasons. Add your own local MP3 files to the audio directory to run playback features.
+Audio files are not included in this repository for copyright reasons. Add your own local MP3 files to a audio directory to run playback features.
