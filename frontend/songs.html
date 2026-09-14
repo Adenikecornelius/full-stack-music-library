@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Songs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Songs</h1>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="artists.html">Artists</a>
+    <a href="albums.html">Albums</a>
+    <a href="songs.html">Songs</a>
+</nav>
+
+<h2>Add Song</h2>
+
+<input id="song-name" placeholder="Song Name">
+<input id="song-year" placeholder="Release Year">
+
+<!-- DROPDOWN INSTEAD OF INPUT -->
+<select id="song-album-id"></select>
+
+<button onclick="createSong()">Create</button>
+
+<p id="song-message"></p>
+
+<hr>
+
+<h2>All Songs</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Album ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="songTable"></tbody>
+</table>
+
+<script src="app.js"></script>
+
+</body>
+</html>
