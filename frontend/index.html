@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- my HEADER WITH my PROFILE IMAGE -->
+<div class="header-section">
+
+    <img src="images/mee.jpeg" alt="Adenike">
+
+    <h1>Adenike's Music Library 🎵</h1>
+
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="artists.html">Artists</a>
+    <a href="albums.html">Albums</a>
+    <a href="songs.html">Songs</a>
+</nav>
+
+<main>
+
+    <h2>Welcome 👋</h2>
+    <p>Discover your favorite music and artists!</p>
+
+    <hr>
+
+    <!-- ARTISTS -->
+    <h2>Featured Artists 🎤</h2>
+
+    <div class="artist-grid">
+
+        <div class="artist-card" onclick="playTrack('davido')">
+            <img src="images/davido.jpg">
+            <p>Davido</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('drake')">
+            <img src="images/drake.jpg">
+            <p>Drake</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('giveon')">
+            <img src="images/giveon.jpg">
+            <p>Giveon</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('cardiB')">
+            <img src="images/cardiB.jpg">
+            <p>Cardi B</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('katseye')">
+            <img src="images/katseye.jpg">
+            <p>Katseye</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('bts')">
+            <img src="images/bts.jpg">
+            <p>BTS</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('beyonce')">
+            <img src="images/beyonce.jpg">
+            <p>Beyoncé</p>
+        </div>
+
+        <div class="artist-card" onclick="playTrack('rihanna')">
+            <img src="images/rihanna.jpg">
+            <p>Rihanna</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- TRACK PLAYER -->
+    <h2>Now Playing 🎧</h2>
+
+    <div class="track-card">
+
+        <img id="track-image" src="images/katseye.jpg">
+
+        <div class="track-info">
+            <p id="track-title"><strong>Touch</strong></p>
+            <p id="track-artist">Katseye</p>
+        </div>
+
+        <audio id="audio-player" controls>
+            <source id="audio-source" src="audio/katseye.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+</main>
+
+<footer>
+    Music Library App © 2026 💕
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+function playTrack(artist) {
+
+    const image = document.getElementById("track-image");
+    const title = document.getElementById("track-title");
+    const artistText = document.getElementById("track-artist");
+    const audioSource = document.getElementById("audio-source");
+    const audioPlayer = document.getElementById("audio-player");
+
+    if (artist === "davido") {
+        image.src = "images/davido.jpg";
+        title.innerText = "Song";
+        artistText.innerText = "Davido";
+        audioSource.src = "audio/davido.mp3";
+    }
+
+    else if (artist === "drake") {
+        image.src = "images/drake.jpg";
+        title.innerText = "God's Plan";
+        artistText.innerText = "Drake";
+        audioSource.src = "audio/drake.mp3";
+    }
+
+    else if (artist === "giveon") {
+        image.src = "images/giveon.jpg";
+        title.innerText = "Heartbreak Anniversary";
+        artistText.innerText = "Giveon";
+        audioSource.src = "audio/giveon.mp3";
+    }
+
+    else if (artist === "cardiB") {
+        image.src = "images/cardiB.jpg";
+        title.innerText = "WAP";
+        artistText.innerText = "Cardi B";
+        audioSource.src = "audio/cardiB.mp3";
+    }
+
+    else if (artist === "katseye") {
+        image.src = "images/katseye.jpg";
+        title.innerText = "Touch";
+        artistText.innerText = "Katseye";
+        audioSource.src = "audio/katseye.mp3";
+    }
+
+    else if (artist === "bts") {
+        image.src = "images/bts.jpg";
+        title.innerText = "Dynamite";
+        artistText.innerText = "BTS";
+        audioSource.src = "audio/bts.mp3";
+    }
+
+    else if (artist === "beyonce") {
+        image.src = "images/beyonce.jpg";
+        title.innerText = "Halo";
+        artistText.innerText = "Beyoncé";
+        audioSource.src = "audio/beyonce.mp3";
+    }
+
+    else if (artist === "rihanna") {
+        image.src = "images/rihanna.jpg";
+        title.innerText = "Work";
+        artistText.innerText = "Rihanna";
+        audioSource.src = "audio/rihanna.mp3";
+    }
+
+    audioPlayer.load();
+    audioPlayer.play();
+}
+</script>
+
+</body>
+</html>
